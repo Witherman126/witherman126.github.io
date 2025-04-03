@@ -1,0 +1,100 @@
+/* ------------------------------GŁÓWNE------------------------------ */
+
+body{
+    /* tło strony */
+    background-image: url(images/bg_ghost.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-y: hidden;
+
+    /* awaryjny kolor */
+    background-color: black;
+
+    font-family: "Roboto Mono", monospace;
+}
+
+/* ------------------------------FAKTYCZNY CONTENT STRONY------------------------------ */
+
+
+/* środkowy div */
+#main{
+    overflow-y: auto;
+    margin: auto;
+
+    box-sizing: border-box;
+    width: 50%;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 1.5vw 3vw rgba(0, 0, 0, 0.8);
+}
+
+#topBar{
+    display: flex;
+    overflow-y: hidden;
+    margin: auto;
+
+    box-sizing: border-box;
+    width: 90%;
+    max-height: 15%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 1vw 1vw rgba(0, 0, 0, 0.7);
+    align-content: center;
+}
+
+
+
+
+/* ukryj scrolla bez wywalania funkcjonalności */
+#main::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; /*dla edge*/
+    scrollbar-width: none;  /* dla firefoxa */
+}
+
+/* ------------------------------ELEMENTY STRONY------------------------------ */
+
+.topBarButton{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+    box-sizing: border-box;
+    width: auto;
+    max-width: 40%;
+    height: 10vh;
+    
+    background-color: rgba(200, 200, 200, 0.1);
+    padding: 3%;
+
+    text-align: center;
+    color:white;
+
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.topBarButton:hover{
+    border:2px black;
+    background: rgba(200, 200, 200, 0.1);
+    background: linear-gradient(0deg, rgba(255,255,255,0.7) 00%, rgba(200, 200, 200, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%);
+
+    color:black;
+}
+
+.topBarButton img{
+    height: 5vh;
+}
+
+/* ------------------------------INNE------------------------------ */
+
+.ivan{
+    /* klasa mocno testowa */
+    display: block;
+    margin:auto;
+    width: 100%;
+}
+
