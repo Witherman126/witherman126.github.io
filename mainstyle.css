@@ -1,15 +1,14 @@
 /* ------------------------------GŁÓWNE------------------------------ */
 
 body{
-    /* tło strony */
     background-image: url(images/bg_ghost.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     overflow-y: hidden;
 
-    /* awaryjny kolor */
     background-color: black;
+    color:white;
 
     font-family: "Roboto Mono", monospace;
 }
@@ -17,7 +16,7 @@ body{
 /* ------------------------------FAKTYCZNY CONTENT STRONY------------------------------ */
 
 
-/* środkowy div */
+/* środkowy segment */
 #main{
     overflow-y: auto;
     margin: auto;
@@ -34,32 +33,61 @@ body{
     display: flex;
     overflow-y: hidden;
     margin: auto;
+    margin-top: 2.5%;
 
     box-sizing: border-box;
     width: 90%;
     max-height: 15%;
 
     background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 0px 1vw 1vw rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 0.75vw 0.75vw rgba(0, 0, 0, 0.7);
     align-content: center;
+    
 }
 
+#centerDiv{
+    display: flex;
+    margin: auto;
+    margin-top: 10%;
 
+    box-sizing: border-box;
+    width: 90%;
 
-
-/* ukryj scrolla bez wywalania funkcjonalności */
-#main::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none; /*dla edge*/
-    scrollbar-width: none;  /* dla firefoxa */
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 0.75vw 0.75vw rgba(0, 0, 0, 0.7);
+    align-content: center;
+    
 }
+
+#profileLeft{
+    float: left;
+
+    box-sizing: border-box;
+    width: 30%;
+}
+
+#profileLeft img{
+    width: 100%;
+    border-radius: 50%;
+    margin: 5%;
+}
+
+#profileRight{
+    float: left;
+
+    box-sizing: border-box;
+    width: 70%;
+    padding-left: 10%;
+    text-align: justify;
+}
+
 
 /* ------------------------------ELEMENTY STRONY------------------------------ */
 
 .topBarButton{
     display: block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 
     box-sizing: border-box;
     width: auto;
@@ -74,25 +102,42 @@ body{
 
     justify-content: center;
     align-content: center;
+
+    transition: all 0.25s;
+    border-radius: 5%;
     
 }
 
+/* efekt po najechaniu */
 .topBarButton:hover{
     border:2px black;
     background: rgba(200, 200, 200, 0.1);
-    background: linear-gradient(0deg, rgba(255,255,255,0.7) 00%, rgba(200, 200, 200, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,0.8) 00%, rgba(200, 200, 200, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%);
 
     color:black;
 }
 
+/* "przyciski" na górnym pasku */
 .topBarButton img{
     height: 5vh;
 }
 
 /* ------------------------------INNE------------------------------ */
 
+/* ukryj scrolla bez wywalania funkcjonalności */
+#main::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; /*dla edge*/
+    scrollbar-width: none;  /* dla firefoxa */
+}
+
+#miniText{
+    font-size: xx-small;
+    color: rgb(30,30,30)
+}
+
+/* klasa mocno testowa */
 .ivan{
-    /* klasa mocno testowa */
     display: block;
     margin:auto;
     width: 100%;
