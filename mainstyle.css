@@ -205,8 +205,6 @@ footer{
 
 /* ------------------------------INNE------------------------------ */
 
-/* ukryj scrolla bez wywalania funkcjonalności */
-
 #miniText{
     font-size: xx-small;
     color: rgba(0,0,0,0.5)
@@ -218,6 +216,8 @@ footer{
     margin:auto;
     width: 100%;
 }
+
+/* ukryj scrolla bez wywalania funkcjonalności */
 
 *::-webkit-scrollbar {
     display: none;
