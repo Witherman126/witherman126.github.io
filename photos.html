@@ -11,18 +11,24 @@
     <title>Wither's Website - Photos</title>
     <link rel="stylesheet" href="mainstyle.css">
     <link rel="shortcut icon" href="images/alert.png" type="image/x-icon">
-    
 </head>
-<body>
+<body onload="run_onload()">
     <div id="main">
 
         <div id="topBar">
 
-                <a class="topBarButton" href="index.html" title="This button leads to the home page.">Homepage</a>
+                <a class="topBarButton" href="index.html" title="This button leads to the home page.">
+                    Homepage
+                </a>
 
-                <a class="topBarButton" href="https://github.com/Witherman126" title="This button leads to my GitHub profile."> <img src="images/github-mark-white.png" alt="GitHub Logo"> <br> GitHub</a>
+                <a class="topBarButton" href="https://github.com/Witherman126" title="This button leads to my GitHub profile."> 
+                    <img src="images/github-mark-white.png" alt="GitHub Logo"> 
+                    <br> GitHub
+                </a>
 
-                <a class="topBarButton" href="photos.html" title="This button leads to my in-game screenshots.">Photos</a>
+                <a class="topBarButton" href="photos.html" title="This button leads to my in-game screenshots.">
+                    Photos
+                </a>
 
 
 
@@ -34,12 +40,20 @@
 
             <div id="photoTop">
 
-                <h1>Screenshot Gallery</h1>
+                <h1 title="Screenshot gallery - click me to reset" onclick="resetPhoto()">Screenshot Gallery</h1>
                 <br>
             </div>
 
             <div id="photoFrame">
-                <p>🚧 Under Construction 🚧</p>
+                <p class="custParagraph">Choose a photo from the gallery below - click on it and it will appear here!</p><br>
+                <p class="custParagraph">The images are taken in-game by me (probably using some photo mode), in 2560x1440 resolution. 
+                    <br>Sometimes I play modded, so some things may look differently than in the original games.
+                </p>
+                <p class="custParagraph">If you wish to reset to empty: click the "Screenshot Gallery" text.</p>
+            </div>
+
+            <div id="miniGallery">
+                <!-- tu generują się obrazki, o klasie nazwanej "choosableImage" oraz onclicku "setPhoto" -->
             </div>
 
         </div>
@@ -47,5 +61,8 @@
         
     </div>
     <footer>Background originates from the game "Ghost Of Tsushima", screenshot taken by me.</footer>
+
+    <script src="main.js"></script>
+    <script src="folder_contents.js"></script>
 </body>
 </html>
