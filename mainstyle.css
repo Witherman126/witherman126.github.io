@@ -171,8 +171,8 @@ footer{
     display: block;
     width: 100%;
     
-    border: solid white 6px;
-    border-radius: 3px;
+    border: solid white 3px;
+    border-radius: 2px;
 
     text-align: center;
     aspect-ratio: 16/9;
