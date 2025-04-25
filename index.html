@@ -8,9 +8,24 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Wither's Website - Homepage</title>
+
     <link rel="stylesheet" href="mainstyle.css">
     <link rel="shortcut icon" href="images/alert.png" type="image/x-icon">
+
+    <style id="scrollbarStyle">
+        *{
+        -ms-overflow-style: none; /*dla edge*/
+        scrollbar-width: none;  /* dla firefoxa*/
+        box-sizing: border-box; /*sizing*/
+        }
+
+        *::-webkit-scrollbar {
+        display: none; /*chromium*/
+        }
+    </style>
+
 </head>
 <body>
     <div id="main">
@@ -19,6 +34,10 @@
 
                 <a class="topBarButton" href="index.html" title="This button leads to the home page.">
                     Homepage
+                </a>
+
+                <a class="topBarButton" title="This button opens/closes the website's local settings in the top-left corner." onclick="settingsToggle()">
+                    Website <br>Settings
                 </a>
 
                 <a class="topBarButton" href="https://github.com/Witherman126" title="This button leads to my GitHub profile."> 
@@ -60,6 +79,18 @@
         
     </div>
     <footer>Background originates from the game "Ghost Of Tsushima", screenshot taken by me.</footer>
+    <div id="settingsArea">
+        <h3>Settings</h3>
+        <h5>You can close this window by pressing the "website settings" button again.</h5>
+        Accessibility
+        <hr>
+
+        <input type="checkbox" id="scrollCheckbox" onclick="toggleScrollbar()"> Should the Scrollbar be visible?
+        <br>(off by default)
+
+        <hr>
+
+    </div>
     <script src="main.js">
         
     </script>

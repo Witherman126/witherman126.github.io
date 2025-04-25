@@ -50,3 +50,70 @@ function run_onload() {
 		}
 	document.getElementById("miniGallery").appendChild(fragment);
 }
+
+//ustawianie przełączenia ustawień
+
+var SettingsActive = 0;
+console.log("are settings currently on? (0 no / 1 yes): "+SettingsActive);
+
+// przełączanie okienka ustawień (napewno sie dało lepiej)
+
+function settingsToggle(){
+  switch (SettingsActive) {
+    case 0:
+
+    document.getElementById("settingsArea").style.visibility="visible";
+    SettingsActive=1;
+    console.log("are settings currently on? (0 no / 1 yes): "+SettingsActive);
+    break;
+
+    case 1:
+      
+    document.getElementById("settingsArea").style.visibility="hidden";
+    console.log("are settings currently on? (0 no / 1 yes): "+SettingsActive);
+    SettingsActive=0;
+    break;
+  
+    default:
+      console.log("????????????");
+      break;
+  }
+}
+
+//------------------------------FUNKCJE USTAWIEŃ------------------------------
+
+//włączanie/wyłączanie scrolla (janky as fuck)
+
+function toggleScrollbar(){
+  if(document.getElementById("scrollCheckbox").checked == true){
+    //jeżeli ma być widoczny
+    console.log("Is Scrollbar visibility enabled? (true/false): "+document.getElementById("scrollCheckbox").checked);
+    document.getElementById("scrollbarStyle").innerHTML=`
+    *{
+    box-sizing: border-box; /*sizing*/
+    }
+    `;
+
+  }else{
+    //jeżeli nie ma być widoczny
+    console.log("Is Scrollbar visibility enabled? (true/false): "+document.getElementById("scrollCheckbox").checked);
+    document.getElementById("scrollbarStyle").innerHTML=`
+    *{
+    -ms-overflow-style: none; /*dla edge*/
+    scrollbar-width: none;  /* dla firefoxa*/
+    box-sizing: border-box; /*sizing*/
+    }
+    *::-webkit-scrollbar {
+    display: none; /*chromium*/
+    }
+    `;
+  }
+}
+
+/* 
+document.getElementById("scrollStyleTag").innerHTML=
+    '*::-webkit-scrollbar {'+
+    ' display: inline;}'+
+    '*{-ms-overflow-style: scrollbar;'+
+    'scrollbar-width: auto;}'
+    */
