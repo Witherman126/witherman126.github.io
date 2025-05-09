@@ -109,3 +109,11 @@ function toggleScrollbar(){
     `;
   }
 }
+
+/* 
+document.getElementById("scrollStyleTag").innerHTML=
+    '*::-webkit-scrollbar {'+
+    ' display: inline;}'+
+    '*{-ms-overflow-style: scrollbar;'+
+    'scrollbar-width: auto;}'
+    */
