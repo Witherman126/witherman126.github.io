@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wither's Website - Homepage</title>
+
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="shortcut icon" href="images/alert.png" type="image/x-icon">
+
+    <style id="scrollbarStyle">
+        *{
+        -ms-overflow-style: none; /*dla edge*/
+        scrollbar-width: none;  /* dla firefoxa*/
+        box-sizing: border-box; /*sizing*/
+        }
+
+        *::-webkit-scrollbar {
+        display: none; /*chromium*/
+        }
+    </style>
+
+</head>
+<body>
+    <div id="main">
+
+        <div id="topBar">
+
+                <a class="topBarButton" href="index.html" title="This button leads to the home page.">
+                    Homepage
+                </a>
+
+                <a class="topBarButton" title="This button opens/closes the website's local settings in the top-left corner." onclick="settingsToggle()">
+                    Website <br>Settings
+                </a>
+
+                <a class="topBarButton" href="https://github.com/Witherman126" title="This button leads to my GitHub profile."> 
+                    <img src="images/github-mark-white.png" alt="GitHub Logo"> 
+                    <br> GitHub
+                </a>
+
+                <a class="topBarButton" href="photos.html" title="This button leads to my in-game screenshots.">
+                    Photos
+                </a>
+
+                 <a class="topBarButton" href="placeholder.html" title="This button leads to my in-game screenshots.">
+                    Coming soon...
+                </a>
+
+        </div>
+
+        <br>
+
+        <div id="centerArea">
+            <p class="constructionSign">🚧 Oops! This is a site under construction. 🚧<br>
+            It's not finished yet. Please wait, I'll get it done.<br>
+            ...eventually :)</p>
+        </div>
+
+        
+    </div>
+    <footer>Background originates from the game "Ghost Of Tsushima", screenshot taken by me.</footer>
+    <div id="settingsArea">
+        <h3>Settings</h3>
+        <h5>You can close this window by pressing the "website settings" button again.</h5>
+        Accessibility
+        <hr>
+
+        <input type="checkbox" id="scrollCheckbox" onclick="toggleScrollbar()"> Should the Scrollbar be visible?
+        <br>(off by default)
+
+        <hr>
+
+    </div>
+    <script src="main.js">
+        
+    </script>
+</body>
+</html>
