@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wither's Website - The state of the Internet as of now</title>
+
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="shortcut icon" href="images/alert.png" type="image/x-icon">
+
+    <style id="scrollbarStyle">
+        *{
+        -ms-overflow-style: none; /*dla edge*/
+        scrollbar-width: none;  /* dla firefoxa*/
+        box-sizing: border-box; /*sizing*/
+        }
+
+        *::-webkit-scrollbar {
+        display: none; /*chromium*/
+        }
+    </style>
+
+    <style>
+        h1,h2, #centeredText{
+            margin:auto;
+            align-content: center;
+            text-align: center;
+            margin-top: 5%;
+        }
+        p{
+            line-height: 200%;
+        }
+    </style>
+
+</head>
+<body onload="loadTopBar()">
+    <div id="main">
+
+        <div id="topBar">
+
+        </div>
+
+        <br>
+
+        <div id="centerArea" style="margin-bottom: 50%;">
+            <div id="centeredText"><b>Please keep in mind this info may not be up to date as of reading - I encourage doing your own research on this.</b></div>
+            <h1>A rant of mine about the current state of the Internet</h1>
+            <br>
+
+            <p>
+            
+            As of writing this (1st of August 2025) privacy on the internet is at a huge risk. The reason being current laws in the United Kingdom and that are most likely coming soon to 
+            the US, Australia, Canada and countries that are part of the European Union.<br>
+            I myself am a resident of one of the above. 
+
+            </p>
+
+            <h2>The true intention and risks of these laws</h2>
+
+            <p>
+
+            The laws are about implementing verification of age for content on the internet that is meant for adults or can be "potentially harmful to children". The laws are being passed/have been passed as 
+            "Kids Online Safety Act" (KOSA, in the US), Online Safety Act (UK) to name some examples.<br>
+            The way it is meant to be executed is via a system that can either estimate a user's age by submitting a face picture or by submitting a government issued ID.<br>
+            While the cause may seem noble at first glance, this is merely a cover to the true intention that is de-anonymising the Internet as a whole. Not only that - this is a security risk, as companies tasked with implementing 
+            verification cannot be trusted - one of them has already suffered a data breach. I am not naming which one as to not shame them - this is just a proof of concept that it is a risk.
+            
+            </p>
+
+            <h2>How this probably affects you right now</h2>
+
+            <p>
+
+            1. If you use Twitter/X you may have stumbled upon a post being blocked, with the message "Due to local laws, we are temporarily restricting access to this content until X estimates your age." 
+            This has also been reported to happen to users situated outside of the US, EU member countries, UK, Canada or Australia.<br>
+            2. Youtube is currently in the process of implementing verification for users using AI. Not to shame AI, but it has been proven to judge age wrong by an example below.<br>
+            3. Discord has an age verification system for accessing NSFW channels, which can use your face to judge your age. There has already been a case where a user's account has been outright suspended 
+            and Discord support being unresponsive, because the AI has deemed the user to be under 13 years old (which violates Discord's TOS). To my knowledge the user was a young adult.
+
+            </p>
+
+            <h2>Suspicions and further ramifications</h2>
+
+            <p>
+
+            The whole thing came into force in a very short timespan - some may have already seen it coming, but the vast majority of Internet users did not. Theories about this being a coordinated effort are very popular 
+            right now and in my opinion are scary but not implausible. What has happened as of now is most likely just the beginning of a slippery slope into mass surveillance and a reality akin to Geore Orwell's "1984".<br>
+            "Dystopian" would be a good word to describe the government's actions.
+
+            </p>
+
+            <h2>What I ask of You, the reader</h2>
+
+            <p>
+
+            Don't stay silent about it. Talk about it, keep the subject afloat so the idea of our privacy does not become forgotten. If You are able to, I encourage You to do something about it in a proactive fashion - contact your local 
+            representatives and explain your concerns about <u>your right</u> to online privacy. If there are any petitions against these laws in your area - sign one. Or two. Or however many you want. The governments need to know, 
+            that we are not going to stand for this.<br>
+            And that <b>we are not going down without a fight.</b>
+
+            </p>
+            <br>
+            <h1>Thank you for your precious time.</h1>
+
+        </div>
+
+        
+    </div>
+    <footer>Background originates from the game "Ghost Of Tsushima", screenshot taken by me.</footer>
+    <div id="settingsArea">
+        <h3>Settings</h3>
+        <h5>You can close this window by pressing the "website settings" button again.</h5>
+        Accessibility
+        <hr>
+
+        <input type="checkbox" id="scrollCheckbox" onclick="toggleScrollbar()"> Should the Scrollbar be visible?
+        <br>(off by default)
+
+        <hr>
+
+    </div>
+    <script src="main.js">
+        
+    </script>
+</body>
+</html>

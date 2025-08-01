@@ -24,7 +24,7 @@ function resetPhoto(){
   
 }
 
-//kod poniżej skopiowany z neta, ale działa :D     dzięki MrFlamey, https://stackoverflow.com/a/23189786
+//kod poniżej skopiowany z neta i dostosowany, ale działa :D     dzięki MrFlamey, https://stackoverflow.com/a/23189786
 
 function mlString(f) {
 		return f.toString().
@@ -34,7 +34,7 @@ function mlString(f) {
 
 //wczytywanie zdjęć do mini-galerii
 
-function run_onload() {
+function massLoadImages() {
 		var filenames = g_FOLDER_CONTENTS.match(/\S+/g);
 		var fragment = document.createDocumentFragment();
 		for (var i = 0; i < filenames.length; ++i) {
@@ -42,7 +42,6 @@ function run_onload() {
 			if (extension == "jpg" || extension == "png") {
 				var image = document.createElement("img");
 				image.src = "images/screenshots/" + filenames[i];
-				image.width = "600";
         image.className="chooseableImage";
         image.onclick=setPhoto();
 				fragment.appendChild(image);
@@ -70,8 +69,8 @@ function settingsToggle(){
     case 1:
       
     document.getElementById("settingsArea").style.visibility="hidden";
-    console.log("are settings currently on? (0 no / 1 yes): "+SettingsActive);
     SettingsActive=0;
+    console.log("are settings currently on? (0 no / 1 yes): "+SettingsActive);
     break;
   
     default:
@@ -108,4 +107,30 @@ function toggleScrollbar(){
     }
     `;
   }
+}
+
+//wczytanie top bara z js (napewno da sie prościej i inaczej, ale nie jestem jeszcze w to taki obcykany a że strona jest prosta to konsekwencji nie ma)
+//zapewne też później będą tym wczytywane ustawienia i inne rzeczy,
+function loadTopBar(){
+  document.getElementById("topBar").innerHTML=`
+                <a class="topBarButton" href="index.html" title="This button leads to the home page.">
+                    Homepage
+                </a>
+
+                <a class="topBarButton" title="This button opens/closes the website's local settings in the top-left corner." onclick="settingsToggle()">
+                    Website <br>Settings
+                </a>
+
+                <a class="topBarButton" href="https://github.com/Witherman126" title="This button leads to my GitHub profile."> 
+                    <img src="images/github-mark-white.png" alt="GitHub Logo"> 
+                    <br> GitHub
+                </a>
+
+                <a class="topBarButton" href="photos.html" title="This button leads to my in-game screenshots.">
+                    Photos
+                </a>
+
+                 <a class="topBarButton" href="other.html" title="This button leads to my in-game screenshots.">
+                    Other
+                </a>`
 }

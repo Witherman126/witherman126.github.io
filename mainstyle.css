@@ -21,7 +21,7 @@ body{
     overflow-y: auto;
     margin: auto;
 
-    width: 60%;
+    width: 70%;
     height: 100vh;
 
     background-color: rgba(0, 0, 0, 0.8);
@@ -116,7 +116,6 @@ footer{
     margin-right: auto;
 
     width: 15%;
-    aspect-ratio: 1/1;
     
     background-color: rgba(200, 200, 200, 0.1);
     padding: 3%;
@@ -211,6 +210,40 @@ footer{
     width: auto;
 
     margin: 1%;
+}
+
+/* ------------------------------ELEMENTY STRONY - OTHER------------------------------ */
+
+.otherLinkButton{
+    display: block;
+    margin-right: auto;
+    margin-bottom: 3%;
+    margin-top: 3%;
+
+    width: 50%;
+    
+    background-color: rgba(200, 200, 200, 0.1);
+    padding: 3%;
+
+    text-align: center;
+    color:white;
+
+    justify-content: center;
+    align-content: center;
+
+    transition: all 0.25s;
+    border-radius: 0.75vw;
+
+    font-style: normal;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.otherLinkButton:hover{
+    background: rgba(200, 200, 200, 0.1);
+    background: linear-gradient(0deg, rgba(255,255,255,0.8) 00%, rgba(200, 200, 200, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%);
+
+    color:rgb(5, 13, 36);
 }
 
 /* ------------------------------INNE------------------------------ */
