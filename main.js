@@ -113,24 +113,45 @@ function toggleScrollbar(){
 //zapewne też później będą tym wczytywane ustawienia i inne rzeczy,
 function loadTopBar(){
   document.getElementById("topBar").innerHTML=`
-                <a class="topBarButton" href="index.html" title="This button leads to the home page.">
+        <a class="topBarButton" href="index.html" title="This button leads to the home page.">
                     Homepage
-                </a>
+        </a>
 
-                <a class="topBarButton" title="This button opens/closes the website's local settings in the top-left corner." onclick="settingsToggle()">
-                    Website <br>Settings
-                </a>
+        <a class="topBarButton" title="This button opens/closes the website's local settings in the top-left corner." onclick="settingsToggle()">
+                    Website Settings<br>(Scrollbar, Accessibility settings)
+        </a>
 
-                <a class="topBarButton" href="https://github.com/Witherman126" title="This button leads to my GitHub profile."> 
-                    <img src="images/github-mark-white.png" alt="GitHub Logo"> 
-                    <br> GitHub
-                </a>
+        <a class="topBarButton" href="https://github.com/Witherman126" title="This button leads to my GitHub profile."> 
+            <img src="images/github-mark-white.png" alt="GitHub Logo"> 
+            <br> GitHub
+        </a>
 
-                <a class="topBarButton" href="photos.html" title="This button leads to my in-game screenshots.">
-                    Photos
-                </a>
+        <a class="topBarButton" href="photos.html" title="This button leads to my in-game screenshots.">
+            Photos
+        </a>
 
-                 <a class="topBarButton" href="other.html" title="This button leads to my in-game screenshots.">
-                    Other
-                </a>`
+        <a class="topBarButton" href="other.html" title="This button leads to my in-game screenshots.">
+            Other
+        </a>
+        
+        `
+        //ustawienia tez wczytamy z jsa
+  document.getElementById("settingsArea").innerHTML=`
+        <h3>Settings</h3>
+        <h5>You can close this window by pressing the "website settings" button again.</h5>
+        Accessibility
+        <hr>
+
+        <input type="checkbox" id="scrollCheckbox" onclick="toggleScrollbar()"> Should the Scrollbar be visible?
+        <br>(off by default)
+
+        <hr>
+
+        <input type="checkbox"> Should the center part of the website be as wide as your screen size? (Not Yet Implemented)
+        <br>(off by default, resets after refresh)
+
+        <hr>
+        
+        `
+        
 }

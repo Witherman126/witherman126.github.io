@@ -118,7 +118,7 @@ footer{
     width: 15%;
     
     background-color: rgba(200, 200, 200, 0.1);
-    padding: 3%;
+    padding: 1%;
 
     text-align: center;
     color:white;
@@ -144,8 +144,7 @@ footer{
 
 /* "przyciski" na górnym pasku */
 .topBarButton img{
-    margin-top: -1vh;
-    width: 40%;
+    width: 30%;
 }
 
 /* ------------------------------ELEMENTY STRONY - PHOTOS------------------------------ */
