@@ -110,7 +110,7 @@ function toggleScrollbar(){
 }
 
 //wczytanie top bara z js (napewno da sie prościej i inaczej, ale nie jestem jeszcze w to taki obcykany a że strona jest prosta to konsekwencji nie ma)
-//zapewne też później będą tym wczytywane ustawienia i inne rzeczy,
+//zapewne też później będą tym wczytywane ustawienia i inne rzeczy
 function loadTopBar(){
   document.getElementById("topBar").innerHTML=`
         <a class="topBarButton" href="index.html" title="This button leads to the home page.">
